@@ -31,6 +31,7 @@ def calc():
                 break
             
             elif response == 'N':
+                clear_output()
                 print('\nHistory of your calculations: \n')
                 print(history)
                 print('Thank you!\nHope to see you again!')
