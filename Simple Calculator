@@ -41,5 +41,6 @@ def calc():
                 print('Wrong input! Enter (Y/N).')
                 continue
                 
+calc()         
            
        
