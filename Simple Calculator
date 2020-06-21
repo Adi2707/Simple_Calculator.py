@@ -1,0 +1,45 @@
+from IPython.display import clear_output
+def ins():
+    print('Hello!\n')
+    print('Following are the rules to be followed to calculate using this calculator.')
+    print("1. To add: use '+' sign.\n2. To substract: use '-' sign.\n3. To multiply: use '*' sign.\n4. To divide: use '/' sign.\n5.To find root: use '**0.5'.\n6. In case of exponents: use '**exponent', i.e. if exponent is 3, 3**3 = 27.\n\n")
+
+
+
+def calc():
+    
+    ins()
+    history=''
+    calculate = True
+    while calculate:
+    
+        print('Enter the equation: ')
+        equation = input()
+        result = eval(equation)
+        history += f'--> {equation} = {result}\n' 
+        print(f'The result is: {result}')
+    
+        print('Do you want to calculate again? (Y/N)')
+        
+        res = True
+        while res:
+            response = input()
+            
+            if response == 'Y':
+                clear_output()
+                ins()
+                break
+            
+            elif response == 'N':
+                print('\nHistory of your calculations: \n')
+                print(history)
+                print('Thank you!\nHope to see you again!')
+                res = False
+                calculate  =False
+                
+            elif response != 'Y' or response != 'N':
+                print('Wrong input! Enter (Y/N).')
+                continue
+                
+           
+       
